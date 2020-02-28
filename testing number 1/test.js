@@ -30,9 +30,8 @@ function statement(invoice) {
          volumeCredits += Math.max(perf.audience - 30, 0);
 
          // Дополнительный бонус за каждые 10 комедий
-         if (comedyCount === 10) {
+         if ((comedyCount / 10) === 0) {
              volumeCredits += Math.floor(perf.audience / 5);
-             comedyCount = 0;
          }
          // Вывод строки счета текущей пьесы
          result += `\t${perf.playId}: ${format(thisAmount / 100)}`;
